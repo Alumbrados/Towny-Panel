@@ -1,4 +1,4 @@
-Towny
+Towny Panel
 =====
 
 Web-based administration for the Minecraft Plugin Towny Advanced
