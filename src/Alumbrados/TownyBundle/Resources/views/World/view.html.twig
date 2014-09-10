@@ -1,0 +1,32 @@
+{% extends "AlumbradosTownyBundle::layout.html.twig" %}
+{% block content %}
+<h1>Towns in {{ world.name }}</h1>
+{% if towns|length > 0 %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th class="string">Mayor</th>
+                <th class="number">Residents</th>
+                <th class="button"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for town in towns %}
+            <tr>
+                <td>{{ town.name }}</td>
+                <td class="string">{{ town.mayor.player.name }}</td>
+                <td class="number">{{ town.residents|length }}</td>
+                <td class="button"><a href="{{ path('town_view', {id: town.id}) }}" class="btn btn-xs btn-primary"><i class="fa fa-fw fa-lg fa-eye"></i> View</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <div class="jumbotron">
+        <h2>Aw snap</h2>
+        <p>There are no towns in this world yet.</p>
+        <p><a class="btn btn-primary btn-lg" role="button" href="{{ path('world_index') }}">Back</a></p>
+    </div>
+{% endif %}
+{% endblock %}

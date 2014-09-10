@@ -1,0 +1,5 @@
+alumbrados_towny:
+    resource: "@AlumbradosTownyBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

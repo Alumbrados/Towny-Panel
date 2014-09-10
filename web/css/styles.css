@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-sep-2014, 0:06:38
+    Author     : Phex
+*/
+
+.map {
+    height: 400px;
+    width: 100%;
+    border: 0;
+}
+.button {
+    width: 1px;
+}
+.number {
+    width: 150px;
+    text-align: right;
+}
+.string {
+    width: 150px;
+}

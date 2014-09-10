@@ -1,0 +1,25 @@
+{% extends "AlumbradosTownyBundle::layout.html.twig" %}
+{% block content %}
+<h1>Worlds</h1>
+<p>Overview of all worlds.</p>
+<div class="row">
+    {% for world in worlds %}
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ world.name }}</h3>
+            </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Towns</dt>
+                    <dd>{{ world.towns|length }}</dd>
+                </dl>                
+                <p class="text-center">
+                    <a href="{{ path('world_view', {'id': world.id}) }}" class="btn btn-primary"><i class="fa fa-fw fa-lg fa-eye"></i> View</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
