@@ -11,6 +11,7 @@ Web-based administration for the Minecraft Plugin Towny Advanced
 * Apache 2
 * MySQL 5+
 * PHP 5.3.4
+* Symfony 2.5+ (via composer)
 * Towny with MySQL
 
 # Installation
